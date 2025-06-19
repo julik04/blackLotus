@@ -1,0 +1,161 @@
+.product-page {
+  padding: 40px 20px;
+  min-height: 100vh;
+  background-color: var(--text-white);
+}
+
+.product-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  color: var(--text-darkpurple);
+  font-size: 16px;
+  cursor: pointer;
+  padding: 10px 0;
+  margin-bottom: 20px;
+  transition: color 0.3s ease;
+}
+
+.back-button:hover {
+  color: var(--text-purple);
+}
+
+.product-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f8f8;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.product-image {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.product-title {
+  font-size: 32px;
+  color: var(--text-darkpurple);
+  margin: 0;
+}
+
+.product-price {
+  font-size: 24px;
+  color: var(--text-purple);
+  font-weight: bold;
+}
+
+.product-category {
+  color: var(--text-lightpurple);
+  font-size: 18px;
+}
+
+.product-description {
+  margin-top: 20px;
+}
+
+.product-description h2 {
+  font-size: 20px;
+  color: var(--text-darkpurple);
+  margin-bottom: 10px;
+}
+
+.product-description p {
+  color: var(--text-purple);
+  line-height: 1.6;
+}
+
+.buy-button {
+  background-color: var(--text-darkpurple);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: auto;
+}
+
+.buy-button:hover {
+  background-color: var(--text-purple);
+}
+
+.error-container {
+  max-width: 600px;
+  margin: 100px auto;
+  text-align: center;
+  padding: 40px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.error-container h2 {
+  color: var(--text-darkpurple);
+  margin-bottom: 20px;
+}
+
+.error-container p {
+  color: var(--text-purple);
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .product-content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .product-title {
+    font-size: 24px;
+  }
+
+  .product-price {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .product-page {
+    padding: 20px 10px;
+  }
+
+  .product-content {
+    padding: 20px;
+  }
+
+  .product-title {
+    font-size: 20px;
+  }
+
+  .product-price {
+    font-size: 18px;
+  }
+
+  .product-category {
+    font-size: 16px;
+  }
+} 

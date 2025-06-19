@@ -1,0 +1,198 @@
+.order-container {
+  background-color: var(--back-pink);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(53, 47, 68, 0.1);
+  margin-bottom: 40px;
+  color: var(--text-darkpurple);
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.create-order-form {
+  padding-top: 20px;
+}
+
+.create-order-form h3 {
+  color: var(--text-darkpurple);
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.create-order-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: var(--text-darkpurple);
+}
+
+.create-order-form input,
+.create-order-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid var(--text-lightpurple);
+  border-radius: 8px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  transition: border-color 0.3s;
+}
+
+.create-order-form input:focus,
+.create-order-form textarea:focus {
+  outline: none;
+  border-color: var(--text-purple);
+}
+
+.create-order-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.form-buttons button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.form-buttons button[type="submit"] {
+  background-color: var(--text-purple);
+  color: var(--text-white);
+}
+
+.form-buttons button[type="submit"]:hover {
+  background-color: var(--text-darkpurple);
+  transform: translateY(-2px);
+}
+
+.cancel-button {
+  background-color: var(--back-pink);
+  color: var(--text-darkpurple);
+}
+
+.cancel-button:hover {
+  background-color: #d9d5e0;
+}
+
+.message {
+  padding: 12px 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.message.success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.orders-list {
+  margin-top: 40px;
+}
+
+.order-card {
+  background-color: var(--back-pink);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(53, 47, 68, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.order-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(53, 47, 68, 0.15);
+}
+
+.order-card h3 {
+  color: var(--text-darkpurple);
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.order-card p {
+  margin-bottom: 10px;
+  color: var(--text-purple);
+  font-size: 15px;
+}
+
+.order-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.edit-button,
+.delete-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.edit-button {
+  background-color: var(--text-purple);
+  color: var(--text-white);
+}
+
+.edit-button:hover {
+  background-color: var(--text-darkpurple);
+}
+
+.delete-button {
+  background-color: #ff3860;
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: #e03156;
+}
+
+.error {
+  color: #ff3860;
+  font-size: 14px;
+  margin-top: 5px;
+  display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .order-container {
+    padding: 20px;
+  }
+
+  .create-order-form {
+    padding: 20px;
+  }
+
+  .form-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .form-buttons button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .order-container {
+    padding: 15px;
+  }
+}

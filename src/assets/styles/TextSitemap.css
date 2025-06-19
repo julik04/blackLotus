@@ -1,0 +1,21 @@
+.sitemap-container {
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 70vh;
+}
+.sitemap-list {
+  list-style-type: none;
+  padding-left: 0;
+  font-size: 32px;
+}
+.sitemap-list li {
+  margin: 10px 0;
+}
+.sitemap-list a {
+  color: var(--text-darkpurple);
+  text-decoration: none;
+}
+.sitemap-list a:hover {
+  text-decoration: underline;
+}

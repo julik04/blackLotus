@@ -1,0 +1,411 @@
+.banner-container {
+  width: 100%;
+  /* max-width: 1225px; */
+  height: 489px;
+  background-color: white;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.banner-image {
+  max-width: none;
+}
+.banner-content {
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
+}
+
+.banner-title {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 65px;
+  color: #000000;
+  margin-bottom: 20px;
+  max-width: 470px;
+}
+
+.banner-description {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 16px;
+  color: #040404;
+  max-width: 305px;
+  margin-bottom: 40px;
+}
+
+.banner-button {
+  width: 260px;
+  height: 82px;
+  background: #5c5470;
+  border-radius: 60px;
+  border: none;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  font-family: "Forum";
+}
+
+.banner-button:hover {
+  transform: scale(1.05);
+}
+
+.banner-discount {
+  position: absolute;
+  right: 760px;
+  top: 260px;
+}
+
+.discount-circle {
+  width: 120px;
+  height: 120px;
+  border: 3px solid #000000;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: white;
+}
+
+.discount-percent {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 48px;
+  color: #000000;
+}
+
+.discount-text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: #000000;
+  margin-top: 5px;
+}
+
+.banner-images {
+  position: relative;
+}
+
+/* Декоративные элементы */
+.banner-container::before {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: #f4f4f4;
+  border-radius: 50%;
+  left: -150px;
+  top: -100px;
+  z-index: 1;
+}
+
+/* Градиентные круги */
+.banner-container::after {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(180deg, #e2dfe7 0%, #5c5470 100%);
+  border-radius: 50%;
+  right: 100px;
+  bottom: -50px;
+  z-index: 0;
+}
+
+/* Дополнительные декоративные круги */
+.banner-circle-1 {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: rgba(244, 244, 244, 0.8);
+  border-radius: 50%;
+  right: 200px;
+  top: 50px;
+  z-index: 1;
+}
+
+.banner-circle-2 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(180deg, #e2dfe7 0%, #5c5470 100%);
+  border-radius: 50%;
+  left: 50%;
+  top: -30px;
+  z-index: 0;
+}
+
+/* Адаптивность */
+@media screen and (max-width: 1990px) {
+  .banner-discount {
+    right: 960px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .banner-discount {
+    right: 760px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .banner-container {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .banner-content {
+    padding: 40px;
+  }
+
+  .banner-title {
+    font-size: 36px;
+    line-height: 48px;
+  }
+
+  .banner-discount {
+    right: 20px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .banner-container {
+    height: auto;
+    min-height: 400px;
+  }
+
+  .banner-content {
+    padding: 30px;
+  }
+
+  .banner-title {
+    font-size: 32px;
+    line-height: 42px;
+  }
+
+  .banner-button {
+    width: 220px;
+    height: 70px;
+    font-size: 28px;
+  }
+
+  .banner-discount {
+    position: relative;
+    right: auto;
+    top: auto;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .discount-circle {
+    width: 100px;
+    height: 100px;
+  }
+
+  .discount-percent {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .discount-text {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .banner-discount {
+    display: none;
+  }
+  .banner-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .banner-content {
+    padding: 20px;
+    align-items: center;
+  }
+
+  .banner-title {
+    font-size: 28px;
+    line-height: 36px;
+    text-align: center;
+  }
+
+  .banner-description {
+    text-align: center;
+    margin: 0 auto 30px;
+  }
+
+  .banner-button {
+    width: 200px;
+    height: 60px;
+    font-size: 24px;
+  }
+
+  .banner-circle-1 {
+    right: 50px;
+    top: 30px;
+    width: 100px;
+    height: 100px;
+  }
+
+  .banner-circle-2 {
+    left: 30px;
+    top: -20px;
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .banner-container {
+    min-height: 350px;
+  }
+
+  .banner-content {
+    padding: 15px;
+  }
+
+  .banner-title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .banner-description {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  .banner-button {
+    width: 180px;
+    height: 50px;
+    font-size: 20px;
+  }
+
+  .discount-circle {
+    width: 80px;
+    height: 80px;
+  }
+
+  .discount-percent {
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  .discount-text {
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  .banner-circle-1 {
+    right: 20px;
+    top: 20px;
+    width: 80px;
+    height: 80px;
+  }
+
+  .banner-circle-2 {
+    left: 20px;
+    top: -15px;
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .banner-container::after {
+    display: none;
+  }
+  .banner-images {
+    display: none;
+  }
+  .banner-container {
+    min-height: 300px;
+  }
+
+  .banner-content {
+    padding: 10px;
+  }
+
+  .banner-title {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .banner-description {
+    font-size: 11px;
+    line-height: 13px;
+  }
+
+  .banner-button {
+    width: 160px;
+    height: 45px;
+    font-size: 18px;
+  }
+
+  .discount-circle {
+    width: 70px;
+    height: 70px;
+  }
+
+  .discount-percent {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  .discount-text {
+    font-size: 9px;
+    line-height: 12px;
+  }
+
+  .banner-circle-1 {
+    right: 10px;
+    top: 10px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .banner-circle-2 {
+    left: 10px;
+    top: -10px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.banner-action-row {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 20px;
+}
+
+.banner-side-image {
+  height: 160px;
+  max-width: 180px;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 768px) {
+  .banner-action-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .banner-side-image {
+    height: 100px;
+    max-width: 120px;
+  }
+}

@@ -1,0 +1,202 @@
+/* Основной контейнер калькулятора */
+.tattoo-estimator {
+  background-color: var(--back-pink);
+  color: var(--text-darkpurple);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Заголовок калькулятора */
+.tattoo-estimator h1 {
+  font-size: 32px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--text-darkpurple);
+}
+
+/* Индикатор прогресса */
+.progress-indicator {
+  font-size: 16px;
+  color: var(--text-purple);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Контейнер вопроса */
+.question-container {
+  margin-bottom: 30px;
+}
+
+.question-container h2 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: var(--text-darkpurple);
+}
+
+/* Контейнер вариантов ответа и кнопки */
+.options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.option-button {
+  padding: 12px 15px;
+  border: 1px solid var(--text-lightpurple);
+  border-radius: 8px;
+  background-color: white;
+  color: var(--text-darkpurple);
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.option-button:hover {
+  background-color: var(--back-pink);
+}
+
+.option-button.selected {
+  background-color: var(--text-purple);
+  color: white;
+  border-color: var(--text-purple);
+}
+
+/* Навигационные кнопки */
+.navigation-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.nav-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--text-darkpurple);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: var(--text-purple);
+}
+
+/* Контейнер результата */
+.result-container {
+  text-align: center;
+}
+
+.result-container h2 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: var(--text-darkpurple);
+}
+
+.cost-range {
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--text-purple);
+  margin-bottom: 20px;
+}
+
+.result-disclaimer {
+  font-size: 14px;
+  color: var(--text-lightpurple);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.restart-button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--text-darkpurple);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.restart-button:hover {
+  background-color: var(--text-purple);
+}
+
+/* Текст disclaimer */
+.estimator-disclaimer {
+  font-size: 12px;
+  color: var(--text-lightpurple);
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Адаптивные стили */
+@media screen and (max-width: 768px) {
+  .tattoo-estimator {
+    padding: 20px;
+    margin: 20px;
+  }
+
+  .tattoo-estimator h1 {
+    font-size: 24px;
+  }
+
+  .question-container h2 {
+    font-size: 20px;
+  }
+
+  .option-button {
+    font-size: 14px;
+  }
+
+  .result-container h2 {
+    font-size: 20px;
+  }
+
+  .cost-range {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .tattoo-estimator {
+    padding: 15px;
+    margin: 10px;
+  }
+
+  .tattoo-estimator h1 {
+    font-size: 20px;
+  }
+
+  .question-container h2 {
+    font-size: 18px;
+  }
+
+  .option-button {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .nav-button,
+  .restart-button {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+
+  .result-container h2 {
+    font-size: 18px;
+  }
+
+  .cost-range {
+    font-size: 20px;
+  }
+
+  .estimator-disclaimer {
+    font-size: 10px;
+  }
+}
