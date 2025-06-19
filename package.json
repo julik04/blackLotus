@@ -1,15 +1,31 @@
 {
   "name": "my-app",
   "version": "0.1.0",
+  "type": "module",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.9.0",
+    "bcrypt": "^6.0.0",
+    "bcryptjs": "^3.0.2",
     "bootstrap": "^5.3.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.18.2",
+    "file-type": "^21.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "knex": "^3.1.0",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.4",
+    "multer": "^2.0.1",
+    "mysql2": "^3.12.0",
+    "pg": "^8.16.1",
+    "puppeteer": "^24.10.2",
+    "puppeteer-core": "^24.1.0",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
     "react": "^18.2.0",
     "react-bootstrap": "^2.10.2",
     "react-collapsed": "^4.1.2",
@@ -20,16 +36,26 @@
     "react-router-dom": "^6.22.3",
     "react-scripts": "5.0.1",
     "sort-by": "^1.2.0",
+    "sqlite3": "^5.1.7",
     "styled-component": "^2.8.0",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1",
     "web-vitals": "^2.1.4"
   },
+  "license": "ISC",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "nodemon dist/server.js",
+    "start:build:dev": "rimraf -rf dist && npm run build && npm run start:dev",
+    "start:build": "rimraf -rf dist && npm run build && npm run start",
+    "src":"cd frontend && npm run start",
+    "server":"cd backend && npm run start:build",
+    "start": "concurrently \"npm run server\" \"npm run src\"",
+    "build": "tsc",
+    "create-migration": "cross-env ENV_PATH=../.env knex migrate:make -x cjs --esm --knexfile src/knexfile.ts",
+    "migrate": "cross-env ENV_PATH=../.env knex migrate:latest --esm --knexfile src/knexfile.ts",
+    "migrate-down": "cross-env ENV_PATH=../.env knex migrate:down --esm --knexfile src/knexfile.ts",
+    "seed": "cross-env ENV_PATH=../.env knex seed:run --esm --knexfile src/knexfile.ts"
   },
   "eslintConfig": {
     "extends": [
@@ -50,6 +76,19 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^6.1.1"
+    "@types/cors": "^2.8.17",
+    "@types/dotenv": "^6.1.1",
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.9",
+    "@types/knex": "^0.15.2",
+    "@types/node": "^24.0.3",
+    "@types/puppeteer": "^5.4.7",
+    "@types/swagger-jsdoc": "^6.0.4",
+    "@types/swagger-ui-express": "^4.1.7",
+    "cross-env": "^7.0.3",
+    "gh-pages": "^6.1.1",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
   }
 }
